@@ -8,7 +8,7 @@ A modular, production-ready FastAPI backend for the Personal Finance AI Advisor.
 
 * **Python Version:** Python 3.12.x
 * **Framework:** FastAPI with Pydantic v2
-* **AI Orchestration:** Google Gemini (`gemini-3.5-flash`) via LangChain / Google GenAI
+* **AI Orchestration:** Google Gemini (`gemini-3.5-flash`) via LangGraph / LangChain / Google GenAI
 * **Vector Store:** Chroma (Cosine distance metric, persistent on-disk storage)
 * **Market Data:** `api.gold-api.com` (real-time XAU/XAG rates in INR with Decimal precision math)
 * **Deployment Target:** Render (Web Service) / Docker
@@ -204,6 +204,7 @@ To deploy this backend as a Web Service on **Render**:
    ```
 8. **Health Check Path:** `/health`
 9. **Environment Variables on Render:**
+   * `PYTHON_VERSION`: `3.12.10`
    * `GEMINI_API_KEY`: Your production Google AI Studio key
    * `GEMINI_MODEL`: `gemini-3.5-flash`
    * `APP_ENV`: `production`
