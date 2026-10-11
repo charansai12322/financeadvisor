@@ -1,0 +1,98 @@
+@import "tailwindcss";
+
+@theme {
+  --color-obsidian: #111713;
+  --color-porcelain: #F5F3EC;
+  --color-ledger: #FFFEFA;
+  --color-chartreuse: #D8FF57;
+  --color-forest: #24483A;
+  --color-clay: #B65F4A;
+  --color-graphite: #252B27;
+  --color-sage: #858E83;
+
+  --font-serif: var(--font-newsreader), Georgia, serif;
+  --font-sans: var(--font-manrope), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono: var(--font-dm-mono), monospace;
+}
+
+:root {
+  --canvas-bg: #F5F3EC;
+  --surface-bg: #FFFEFA;
+  --obsidian-bg: #111713;
+  --text-primary: #252B27;
+  --text-secondary: #858E83;
+  --accent: #D8FF57;
+  --positive: #24483A;
+  --negative: #B65F4A;
+}
+
+/* Base Body Styles */
+body {
+  background-color: var(--canvas-bg);
+  color: var(--text-primary);
+  font-family: var(--font-manrope), sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Refined Typography Classes */
+.font-headline {
+  font-family: var(--font-newsreader), Georgia, serif;
+}
+
+.font-interface {
+  font-family: var(--font-manrope), sans-serif;
+}
+
+.font-figures {
+  font-family: var(--font-dm-mono), monospace;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Custom Scrollbar for Ledger Aesthetics */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F5F3EC;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D1D5DB;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #9CA3AF;
+}
+
+/* Subtle Card & Surface Utilities */
+.ledger-card {
+  background-color: #FFFEFA;
+  border: 1px solid rgba(17, 23, 19, 0.08);
+  box-shadow: 0 1px 3px rgba(17, 23, 19, 0.02), 0 4px 12px rgba(17, 23, 19, 0.03);
+}
+
+.ledger-card-dark {
+  background-color: #111713;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #FFFEFA;
+}
+
+/* Accessible focus ring */
+.ledger-focus-ring:focus-visible {
+  outline: 2px solid #111713;
+  outline-offset: 2px;
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

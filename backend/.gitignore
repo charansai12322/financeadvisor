@@ -1,0 +1,23 @@
+# Local environment secrets
+.env
+.env.local
+.env.*.local
+
+# Python runtime artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+
+# Testing & Coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Local Vector Database & Downloaded PDFs
+chroma_langchain_db/
+data/pdfs/
